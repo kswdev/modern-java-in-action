@@ -1,7 +1,7 @@
 package chapter2._3_simplize;
 
-import chapter2.common.Apple;
-import chapter2.common.Color;
+import common.apple.Apple;
+import common.apple.Color;
 
 import java.util.ArrayList;
 import java.util.List;

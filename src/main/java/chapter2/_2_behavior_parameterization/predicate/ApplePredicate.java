@@ -1,6 +1,6 @@
 package chapter2._2_behavior_parameterization.predicate;
 
-import chapter2.common.Apple;
+import common.apple.Apple;
 
 public interface ApplePredicate {
 

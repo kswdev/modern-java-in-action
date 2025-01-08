@@ -1,7 +1,7 @@
 package chapter2._2_behavior_parameterization.predicate;
 
-import chapter2.common.Apple;
-import chapter2.common.Color;
+import common.apple.Apple;
+import common.apple.Color;
 
 public class AppleRedAndHeavyPredicate implements ApplePredicate{
     @Override

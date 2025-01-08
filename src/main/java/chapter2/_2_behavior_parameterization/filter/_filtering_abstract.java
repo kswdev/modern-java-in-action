@@ -1,7 +1,7 @@
 package chapter2._2_behavior_parameterization.filter;
 
 import chapter2._2_behavior_parameterization.predicate.ApplePredicate;
-import chapter2.common.Apple;
+import common.apple.Apple;
 
 import java.util.ArrayList;
 import java.util.List;
