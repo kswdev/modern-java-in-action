@@ -1,6 +1,6 @@
 package common.apple;
 
-public class Apple {
+public class Apple implements Comparable<Apple> {
 
     private final Color color;
     private final int weight;
@@ -16,5 +16,10 @@ public class Apple {
 
     public Color getColor() {
         return color;
+    }
+
+    @Override
+    public int compareTo(Apple o) {
+        return this.getWeight() - o.getWeight();
     }
 }
