@@ -5,6 +5,6 @@ import common.apple.Apple;
 public class AppleGreenColorPredicate implements ApplePredicate{
     @Override
     public boolean test(Apple apple) {
-        return apple.getWeight() > 150;
+        return apple.getWeightValue() > 150;
     }
 }
