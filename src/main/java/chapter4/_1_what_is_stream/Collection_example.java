@@ -1,7 +1,7 @@
 package chapter4._1_what_is_stream;
 
-import chapter4.common.Dish;
-import chapter4.common.DishExample;
+import common.dish.Dish;
+import common.dish.DishExample;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,8 +1,7 @@
 package chapter4._2_stream_operation;
 
-import chapter4.common.DishExample;
+import common.dish.DishExample;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Intermediate_example {
