@@ -1,4 +1,4 @@
-package chapter4.common;
+package common.dish;
 
 import java.util.Arrays;
 import java.util.List;
