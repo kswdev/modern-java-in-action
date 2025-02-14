@@ -1,4 +1,4 @@
-package chapter5._3_search_matching;
+package chapter5._4_search_matching;
 
 import common.dish.Dish;
 import common.dish.DishExample;
