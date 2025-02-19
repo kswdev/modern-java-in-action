@@ -5,7 +5,6 @@ import java.util.List;
 
 public abstract class DishExample {
     public static List<Dish> menu = Arrays.asList(
-
             new Dish("season fruits", true, 120, Dish.Type.OTHER),
             new Dish("prawns", false, 300, Dish.Type.FISH),
             new Dish("rice", true, 350, Dish.Type.OTHER),
