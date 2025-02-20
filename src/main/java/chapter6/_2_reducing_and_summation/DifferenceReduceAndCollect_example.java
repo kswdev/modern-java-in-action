@@ -2,7 +2,6 @@ package chapter6._2_reducing_and_summation;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.BiFunction;
 import java.util.stream.Stream;
 
 public class DifferenceReduceAndCollect_example {
