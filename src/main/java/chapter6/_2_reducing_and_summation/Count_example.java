@@ -1,4 +1,4 @@
-package chapter6._1_reducing_and_summation;
+package chapter6._2_reducing_and_summation;
 
 import common.dish.DishExample;
 
