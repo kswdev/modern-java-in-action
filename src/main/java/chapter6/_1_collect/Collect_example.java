@@ -1,4 +1,4 @@
-package chapter6._0_collect;
+package chapter6._1_collect;
 
 import common.trade.Currency;
 import common.trade.Transaction;
