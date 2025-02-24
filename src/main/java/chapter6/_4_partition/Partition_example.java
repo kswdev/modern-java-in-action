@@ -1,11 +1,10 @@
-package chapter6._3_grouping;
+package chapter6._4_partition;
 
 import common.dish.Dish;
 import common.dish.DishExample;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.*;
