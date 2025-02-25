@@ -1,12 +1,11 @@
 package chapter6._5_collector;
 
-import common.collector.ToListCollector;
+import chapter6._5_collector.collector.ToListCollector;
 import common.dish.Dish;
 import common.dish.DishExample;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Collector_example {
 

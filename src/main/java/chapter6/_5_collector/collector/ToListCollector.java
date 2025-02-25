@@ -1,4 +1,4 @@
-package common.collector;
+package chapter6._5_collector.collector;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
