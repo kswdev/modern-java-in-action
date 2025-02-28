@@ -1,8 +1,9 @@
-package chapter7;
+package chapter7._1_parallel_stream;
 
 import org.openjdk.jmh.annotations.*;
 
 import java.util.concurrent.TimeUnit;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 @BenchmarkMode(Mode.AverageTime) //벤치마크 대상 메서드를 실행하는 데 걸링 평균 시간 측정
@@ -11,13 +12,21 @@ import java.util.stream.Stream;
 @Fork(value = 2, jvmArgs = {"-Xms4G", "-Xmx4G"}) //4Gb의 힙 공간을 제공한 환경에서 두 번 벤치마크를 수행
 @Measurement(iterations = 5, time = 1)
 @Warmup(iterations = 5, time = 1)
-public class ParallelStreamBenchmark {
+public class SequentialStreamBenchmark {
 
     private static final long N = 10_000_000L;
 
-    @Benchmark
+    //순차 스트림, 박싱 언박싱 오버헤드, 청크 분할 x
+    //@Benchmark
     public long sequentialSum() {
         return Stream.iterate(1L, i->i+1).limit(N)
+                .reduce(0L, Long::sum);
+    }
+
+    //순차 스트림, 오토박싱 언박싱 x,  청크 분할 o
+    @Benchmark
+    public long sequentialSumWithLongStream() {
+        return LongStream.rangeClosed(0L, N)
                 .reduce(0L, Long::sum);
     }
 

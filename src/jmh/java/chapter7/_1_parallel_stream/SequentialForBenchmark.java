@@ -1,9 +1,8 @@
-package chapter7;
+package chapter7._1_parallel_stream;
 
 import org.openjdk.jmh.annotations.*;
 
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Stream;
 
 @BenchmarkMode(Mode.AverageTime) //벤치마크 대상 메서드를 실행하는 데 걸링 평균 시간 측정
 @OutputTimeUnit(TimeUnit.MILLISECONDS) //벤치마크 결과를 밀리초 단위로 출력
@@ -17,8 +16,12 @@ public class SequentialForBenchmark {
 
     @Benchmark
     public long sequentialSum() {
-        return Stream.iterate(1L, i->i+1).limit(N)
-                .reduce(0L, Long::sum);
+        long sum = 0;
+
+        for (long i = 1L; i <= N; i++)
+            sum += i;
+
+        return sum;
     }
 
     @TearDown(Level.Invocation) // 매 번 벤치마크 실행한 다음에는 가비지 컬렉터 동작 시도
