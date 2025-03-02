@@ -2,18 +2,14 @@ package chapter7._1_parallel_stream;
 
 import java.util.stream.LongStream;
 
-import static common.Measure.measurePerf;
+import static common.Measure.measure;
 
 public class ProperUseOfParallelStream {
 
     private static final long N = 10_000_000L;
 
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            long result = sideEffectSum(N);
-            System.out.println("Result: " + result);
-        }
-        System.out.println("SideEffect parallel sum done in: " + measurePerf(ProperUseOfParallelStream::sideEffectSum, 10_000_000L) + " msecs");
+        measure(ProperUseOfParallelStream::sideEffectSum, 10, N);
     }
 
     public static long sideEffectSum(long n) {
