@@ -16,6 +16,6 @@ public abstract class Measure {
             result += measurePerf(function, n);
         }
         result /= iterate;
-        System.out.println("SideEffect parallel sum done in: " + result + " msecs");
+        System.out.println("done in: " + result + " msecs");
     }
 }
