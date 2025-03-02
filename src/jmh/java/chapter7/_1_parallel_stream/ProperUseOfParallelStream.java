@@ -2,14 +2,14 @@ package chapter7._1_parallel_stream;
 
 import java.util.stream.LongStream;
 
-import static common.Measure.measure;
+import static common.Measure.measureAverage;
 
 public class ProperUseOfParallelStream {
 
     private static final long N = 10_000_000L;
 
     public static void main(String[] args) {
-        measure(ProperUseOfParallelStream::sideEffectSum, 10, N);
+        measureAverage(ProperUseOfParallelStream::sideEffectSum, 10, N);
     }
 
     public static long sideEffectSum(long n) {

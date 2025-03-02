@@ -6,14 +6,14 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.stream.LongStream;
 
-import static common.Measure.measure;
+import static common.Measure.measureAverage;
 
 public class ForkJoinSum_example {
 
     private static final long N = 10_000_000L;
 
     public static void main(String[] args) {
-        measure(ForkJoinSum_example::forkJoinSum, 10, N);
+        measureAverage(ForkJoinSum_example::forkJoinSum, 10, N);
     }
 
     public static long forkJoinSum(long n) {
