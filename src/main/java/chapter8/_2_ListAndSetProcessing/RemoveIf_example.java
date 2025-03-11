@@ -1,6 +1,7 @@
 package chapter8._2_ListAndSetProcessing;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class RemoveIf_example {
@@ -25,12 +26,12 @@ public class RemoveIf_example {
             }
         }
 
-        /*// 위 코드 해석
+        // 위 코드 해석
         for (Iterator<Transaction> iterator = transactions.iterator();
              iterator.hasNext();) {
             Transaction transaction = iterator.next();
-            if (Character.isDigit(transaction.referenceCode().charAt(0))) {
-                *//* iterator 가 순회중에 컬렉션의 크기 변경을 감지하고 에러를 던짐 *//*
+            if (Character.isDigit(transaction.getReferenceCode().charAt(0))) {
+                // iterator 가 순회중에 컬렉션의 크기 변경을 감지하고 에러를 던짐
                 transactions.remove(transaction);
             }
         }
@@ -39,14 +40,14 @@ public class RemoveIf_example {
         for (Iterator<Transaction> iterator = transactions.iterator();
             iterator.hasNext();) {
             Transaction transaction = iterator.next();
-            if (Character.isDigit(transaction.referenceCode().charAt(0))) {
+            if (Character.isDigit(transaction.getReferenceCode().charAt(0))) {
                 iterator.remove();
             }
         }
 
         //removeIf
         transactions.removeIf(transaction ->
-                Character.isDigit(transaction.referenceCode().charAt(0)));*/
+                Character.isDigit(transaction.getReferenceCode().charAt(0)));
     }
 
     private static class Transaction {
