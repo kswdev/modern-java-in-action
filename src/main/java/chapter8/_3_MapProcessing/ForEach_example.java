@@ -23,20 +23,5 @@ public class ForEach_example {
         ageOfFriends.forEach((friend, age) -> {
             System.out.println(friend + " is " + age + " years old.");
         });
-
-        Map<String, List<String>> friendsToMovies = new HashMap<>();
-
-        String friend = "Jane";
-
-        List<String> movies = friendsToMovies.get(friend);
-        if (movies == null) {
-            movies = new ArrayList<>();
-            friendsToMovies.put(friend, movies);
-        }
-        movies.add("The Godfather");
-        System.out.println(friendsToMovies);
-
-        friendsToMovies.computeIfAbsent(friend, k -> new ArrayList<>())
-                       .add("The GodFather");
     }
 }

@@ -3,10 +3,7 @@ package chapter8._3_MapProcessing;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CalculatePattern_example {
 
@@ -28,8 +25,23 @@ public class CalculatePattern_example {
         lines.forEach(line ->
                 dataToHash.computeIfAbsent(line, CalculatePattern_example::calculateDigest));
 
-        String friend = "Raphael";
-        List<String> Movies = friends
+
+        //전통적인 방법 - 키를 조회해 List 값에 요소를 추가하기 전 초기화를 확읺
+        Map<String, List<String>> friendsToMovies = new HashMap<>();
+
+        String friend = "Jane";
+
+        List<String> movies = friendsToMovies.get(friend);
+        if (movies == null) {
+            movies = new ArrayList<>();
+            friendsToMovies.put(friend, movies);
+        }
+        movies.add("The Godfather");
+        System.out.println(friendsToMovies);
+
+        // computeIfAbsent - 개선된 방법
+        friendsToMovies.computeIfAbsent(friend, k -> new ArrayList<>())
+                .add("The GodFather");
     }
 
     private static byte[] calculateDigest(String key) {
