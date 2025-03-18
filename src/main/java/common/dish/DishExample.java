@@ -15,4 +15,10 @@ public abstract class DishExample {
             new Dish("beef", false, 700, Dish.Type.MEAT),
             new Dish("pork", false, 800, Dish.Type.MEAT)
     );
+
+    public static CaloricLevel getCaloricLevel(Dish dish) {
+        if (dish.getCalories() < 400){ return CaloricLevel.DIET; }
+        else if (400 < dish.getCalories() && dish.getCalories() < 700){ return CaloricLevel.NORMAL; }
+        else { return CaloricLevel.FAT; }
+    }
 }
