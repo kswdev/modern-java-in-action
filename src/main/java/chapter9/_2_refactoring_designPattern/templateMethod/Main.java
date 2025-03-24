@@ -7,5 +7,6 @@ public class Main {
     public static void main(String[] args) {
         new OnlineBankingLambda().processCustomer(1, (customer) ->
                         System.out.println("Hello " + customer.getName()));
+
     }
 }
