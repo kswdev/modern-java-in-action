@@ -8,7 +8,7 @@ import java.util.List;
 
 import static java.util.Comparator.*;
 
-public class Comparator {
+public class DSL_Comparator {
 
     public static void main(String[] args) {
         List<Dish> dishes = DishExample.menu;
