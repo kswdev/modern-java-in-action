@@ -1,7 +1,7 @@
 package chapter10._2_java8_smallest_DSL;
 
-import chapter10._2_java8_smallest_DSL.common.car.*;
-import chapter10._2_java8_smallest_DSL.common.Person;
+import common.person.Person;
+import common.car.*;
 
 import java.util.Comparator;
 import java.util.List;
@@ -37,7 +37,7 @@ public class DSL_Collector {
 
         // 두 Comparator 를 플루언트 방식으로 연결해서 다중 필드 Comparator 정의
         Comparator<Person> comparator =
-                comparing(Person::age).thenComparing(Person::name);
+                comparing(Person::getAge).thenComparing(Person::getName);
 
         // Collectors 를 중첩함으로 다중 수준 Collector
         Collector<? super Car, ?, Map<Brand, Map<Color, List<Car>>>> carGroupingByBrandAndColor =

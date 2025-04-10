@@ -1,28 +1,26 @@
-package chapter10._2_java8_smallest_DSL.common.car;
+package common.car;
 
-public class Ioniq implements Car {
+public class Accord implements Car {
 
-    private final Brand brand = Brand.HYUNDAI;
+    private final Brand brand = Brand.HONDA;
     private final Color color;
 
-    public Ioniq(Color color) {
+    public Accord(Color color) {
         this.color = color;
     }
 
     @Override
     public Brand getBrand() {
-        System.out.println("brand");
         return this.brand;
     }
 
     @Override
     public Color getColor() {
-        System.out.println("color");
         return this.color;
     }
 
     @Override
     public String toString() {
-        return "Ioniq";
+        return "Accord";
     }
 }

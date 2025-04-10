@@ -1,11 +1,11 @@
-package chapter10._2_java8_smallest_DSL.common.car;
+package common.car;
 
-public class Kona implements Car {
+public class Odyssey implements Car {
 
-    private final Brand brand = Brand.HYUNDAI;
+    private final Brand brand = Brand.HONDA;
     private final Color color;
 
-    public Kona(Color color) {
+    public Odyssey(Color color) {
         this.color = color;
     }
 
@@ -21,6 +21,6 @@ public class Kona implements Car {
 
     @Override
     public String toString() {
-        return "Kona";
+        return "Odyssey";
     }
 }
