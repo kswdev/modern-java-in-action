@@ -1,9 +1,12 @@
 package common.car;
 
+import common.insurance.Insurance;
+
 public class Accord implements Car {
 
     private final Brand brand = Brand.HONDA;
     private final Color color;
+    private Insurance insurance;
 
     public Accord(Color color) {
         this.color = color;
@@ -17,6 +20,11 @@ public class Accord implements Car {
     @Override
     public Color getColor() {
         return this.color;
+    }
+
+    @Override
+    public Insurance getInsurance() {
+        return this.insurance;
     }
 
     @Override

@@ -1,9 +1,12 @@
 package common.car;
 
+import common.insurance.Insurance;
+
 public class Ioniq implements Car {
 
     private final Brand brand = Brand.HYUNDAI;
     private final Color color;
+    private Insurance insurance;
 
     public Ioniq(Color color) {
         this.color = color;
@@ -20,6 +23,9 @@ public class Ioniq implements Car {
         System.out.println("color");
         return this.color;
     }
+
+    @Override
+    public Insurance getInsurance(){ return insurance; }
 
     @Override
     public String toString() {
