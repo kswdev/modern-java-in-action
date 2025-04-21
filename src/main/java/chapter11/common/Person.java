@@ -19,4 +19,6 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
+    public void setCar(Optional<Car> car) { this.car = car; }
 }
