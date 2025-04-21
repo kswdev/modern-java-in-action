@@ -1,7 +1,7 @@
 package chapter10._2_java8_smallest_DSL;
 
-import common.person.Person;
 import common.car.*;
+import common.person.Person;
 
 import java.util.Comparator;
 import java.util.List;
