@@ -2,5 +2,7 @@ package chapter13.common;
 
 public interface Drawble {
 
-    void draw();
+    default void draw() {
+        throw new UnsupportedOperationException();
+    }
 }
