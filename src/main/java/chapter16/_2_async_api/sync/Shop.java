@@ -1,5 +1,8 @@
 package chapter16._2_async_api.sync;
 
+import static chapter16.common.Util.delay;
+import static chapter16.common.Util.random;
+
 public class Shop {
     public double getPrice(String product) {
         return calculatePrice(product);
