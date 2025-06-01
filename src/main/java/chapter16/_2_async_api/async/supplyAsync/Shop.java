@@ -1,4 +1,4 @@
-package chapter16._2_async_api.async;
+package chapter16._2_async_api.async.supplyAsync;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
@@ -6,7 +6,7 @@ import java.util.concurrent.Future;
 import static chapter16.common.Util.delay;
 import static chapter16.common.Util.random;
 
-public class ShopWithSupplyAsync {
+public class Shop {
     public Future<Double> getPriceAsync(String product) {
         return CompletableFuture.supplyAsync(() -> calculatePrice(product));
     }
