@@ -1,7 +1,5 @@
 package chapter16._2_async_api.sync;
 
-import static chapter16._2_async_api.common.Util.*;
-
 public class Shop {
     public double getPrice(String product) {
         return calculatePrice(product);

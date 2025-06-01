@@ -1,4 +1,4 @@
-package chapter16._2_async_api.common;
+package chapter16.common;
 
 import java.util.Random;
 

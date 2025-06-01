@@ -3,8 +3,8 @@ package chapter16._2_async_api.async;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
-import static chapter16._2_async_api.common.Util.delay;
-import static chapter16._2_async_api.common.Util.random;
+import static chapter16.common.Util.delay;
+import static chapter16.common.Util.random;
 
 public class Shop {
     public Future<Double> getPriceAsync(String product) {
