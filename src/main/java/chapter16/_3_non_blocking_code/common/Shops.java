@@ -10,7 +10,7 @@ public abstract class Shops {
 
     private static final ExecutorService executor = Executors.newFixedThreadPool(3);
 
-    private static final List<Shop> shops = Arrays.asList(new Shop("BestPrice"),
+    public static final List<Shop> shops = Arrays.asList(new Shop("BestPrice"),
                                                   new Shop("LetsSaveBig"),
                                                   new Shop("BuyItAll"),
                                                   new Shop("BuyItAll2"),
