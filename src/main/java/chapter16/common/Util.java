@@ -13,4 +13,13 @@ public abstract class Util {
             e.printStackTrace();
         }
     }
+
+    public static void randomDelay() {
+        int delay = 500 + random.nextInt(2000);
+        try {
+            Thread.sleep(delay);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -59,7 +59,7 @@ public abstract class Shops {
                                  CompletableFuture.supplyAsync(
                                          () -> getRate("EUR", "USD"))
                                          // 디폴트 값, 시간, 시간 단위
-                                         .completeOnTimeout(1.1, 2, TimeUnit.SECONDS),
+                                         .completeOnTimeout(1.1, 1, TimeUnit.SECONDS),
                                  (price, rate) -> price * rate
                          ).orTimeout(3, TimeUnit.SECONDS);
 
