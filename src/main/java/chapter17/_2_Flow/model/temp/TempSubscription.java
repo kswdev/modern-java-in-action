@@ -1,5 +1,7 @@
 package chapter17._2_Flow.model.temp;
 
+import chapter17.common.TempInfo;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

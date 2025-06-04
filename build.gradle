@@ -25,7 +25,10 @@ dependencies {
     jmh 'org.openjdk.jmh:jmh-core:1.37'
     jmh 'org.openjdk.jmh:jmh-generator-annprocess:1.37'
 
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 

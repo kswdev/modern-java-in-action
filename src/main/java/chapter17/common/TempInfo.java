@@ -1,4 +1,4 @@
-package chapter17._2_Flow.model.temp;
+package chapter17.common;
 
 import java.util.Random;
 
@@ -16,6 +16,10 @@ public class TempInfo {
 
     // 정적 팩토리 메서드를 이용해 해당 도시의 tempInfo 인스턴스를 만든다.
     public static TempInfo fetch(String town) {
+
+        // 1/10 확률로 실패
+        if (random.nextInt(10) == 0)
+            throw new RuntimeException("Error fetching temp info for " + town);
         return new TempInfo(town, random.nextInt(100));
     }
 

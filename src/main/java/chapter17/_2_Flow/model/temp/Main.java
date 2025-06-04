@@ -1,5 +1,7 @@
 package chapter17._2_Flow.model.temp;
 
+import chapter17.common.TempInfo;
+
 import static java.util.concurrent.Flow.Publisher;
 
 public class Main {
